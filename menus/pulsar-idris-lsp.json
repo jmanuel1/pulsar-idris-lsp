@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle pulsar-idris-lsp",
+        "command": "pulsar-idris-lsp:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "pulsar-idris-lsp",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "pulsar-idris-lsp:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "name": "atom-languageclient",
+  "version": "1.16.1",
+  "description": "Integrate Language Servers with Atom",
+  "repository": "https://github.com/atom-ide-community/atom-languageclient",
+  "license": "MIT",
+  "main": "./build/lib/main",
+  "types": "./build/lib/main.d.ts",
+  "files": [
+    "build/lib",
+    "lib",
+    "typings"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "shx rm -rf build && mkdirp build",
+    "compile": "npm run copy.typings && tsc",
+    "copy.typings": "shx cp -r ./typings ./build",
+    "format": "prettier --write .",
+    "lint": "eslint . --fix",
+    "test": "npm run compile && atom --test build/test",
+    "test.format": "prettier . --check",
+    "test.lint": "eslint .",
+    "watch": "npm run compile -- --watch"
+  },
+  "prettier": "prettier-config-atomic",
+  "dependencies": {
+    "atom-ide-base": "^3.3.0",
+    "rimraf": "^3.0.2",
+    "vscode-jsonrpc": "6.0.0",
+    "vscode-languageserver-protocol": "3.16.0",
+    "vscode-languageserver-types": "3.16.0",
+    "zadeh": "3.0.0-beta.4"
+  },
+  "devDependencies": {
+    "@types/atom": "^1.40.11",
+    "@types/jasmine": "^4.0.0",
+    "@types/node": "^17.0.0",
+    "@types/rimraf": "^3.0.2",
+    "atom-jasmine3-test-runner": "^5.2.9",
+    "eslint-config-atomic": "1.17.1",
+    "prettier-config-atomic": "^3.0.1",
+    "shx": "^0.3.3",
+    "spawk": "^1.7.1",
+    "standard-language-server": "^0.1.0",
+    "typescript": "~4.6.0"
+  },
+  "atomTestRunner": "./test/runner"
+}
