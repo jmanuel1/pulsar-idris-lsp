@@ -668,7 +668,7 @@ export default class AutoLanguageClient {
       inclusionPriority: 1,
       suggestionPriority: 2,
       excludeLowerPriority: false,
-      filterSuggestions: true,
+      filterSuggestions: false,
       getSuggestions: this.getSuggestions.bind(this),
       onDidInsertSuggestion: (event) => {
         AutocompleteAdapter.applyAdditionalTextEdits(event)

@@ -23,7 +23,7 @@ export default class OutlineViewAdapter {
    * @returns A {Boolean} indicating adapter can adapt the server based on the given serverCapabilities.
    */
   public static canAdapt(serverCapabilities: ServerCapabilities): boolean {
-    return serverCapabilities.documentSymbolProvider === true
+    return Boolean(serverCapabilities.documentSymbolProvider)
   }
 
   /**

@@ -17,7 +17,7 @@ export default class DefinitionAdapter {
    * @returns A {Boolean} indicating adapter can adapt the server based on the given serverCapabilities.
    */
   public static canAdapt(serverCapabilities: ServerCapabilities): boolean {
-    return serverCapabilities.definitionProvider === true
+    return Boolean(serverCapabilities.definitionProvider)
   }
 
   /**

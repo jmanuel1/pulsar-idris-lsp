@@ -20,7 +20,7 @@ import { Range, TextEditor } from "atom"
 export default class CodeActionAdapter {
   /** @returns A {Boolean} indicating this adapter can adapt the server based on the given serverCapabilities. */
   public static canAdapt(serverCapabilities: ServerCapabilities): boolean {
-    return serverCapabilities.codeActionProvider === true
+    return Boolean(serverCapabilities.codeActionProvider)
   }
 
   /**
