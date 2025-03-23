@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "atom-languageclient": "file:vendor/atom-languageclient",
+    "atom-select-list": "^0.8.1",
     "wsl-path": "^4.0.0"
   },
   "devDependencies": {
