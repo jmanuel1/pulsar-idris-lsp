@@ -45,9 +45,9 @@ export default class Convert {
     let filePath = decodeURIComponent(url.pathname)
     if (process.platform === "win32") {
       // Deal with Windows drive names
-      if (filePath[0] === "/") {
-        filePath = filePath.substr(1)
-      }
+      // if (filePath[0] === "/") {
+      //   filePath = filePath.substr(1)
+      // }
       return wslToWindowsSync(filePath).replace(/\//g, "\\")
     }
     return wslToWindowsSync(filePath)
