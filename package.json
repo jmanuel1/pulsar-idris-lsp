@@ -7,7 +7,7 @@
   "activationCommands": {
     "atom-workspace": "pulsar-idris-lsp:toggle"
   },
-  "repository": "https://github.com/atom/pulsar-idris-lsp",
+  "repository": "https://github.com/jmanuel1/pulsar-idris-lsp",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
